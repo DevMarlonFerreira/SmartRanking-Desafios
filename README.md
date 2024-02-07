@@ -5,7 +5,7 @@
 <!-- ABOUT THE PROJECT -->
 <h2 tabindex="-1" dir="auto"><a id="user-content--about-the-project" class="anchor" aria-hidden="true" tabindex="-1" href="#about-the-project">🔭 About The Project 🔭</h2>
 
-Serviço de Desafios da aplicação Smartranking.
+Serviço de Desafios da aplicação SmartRanking.
 
 <!-- GETTING STARTED -->
 <h2 tabindex="-1" dir="auto"><a id="getting-started" class="anchor" aria-hidden="true" tabindex="-1" href="#getting-started">🚀 Getting Started 🚀</h2>
