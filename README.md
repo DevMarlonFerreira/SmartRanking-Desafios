@@ -23,7 +23,7 @@ Serviço de Desafios da aplicação SmartRanking.
 
 1. Clone o repositório
    ```sh
-   git clone https://github.com/DevMarlonFerreira/micro-desafios
+   git clone https://github.com/DevMarlonFerreira/SmartRanking-Desafio
    ```
 2. Instale os NPM packages
    ```sh
