@@ -1,11 +1,11 @@
 <a name="readme-top"></a>
 
-<h1 align="center">Smartranking - micro-desafios</h1>
+<h1 align="center">SmartRanking-Desafios</h1>
 
 <!-- ABOUT THE PROJECT -->
 <h2 tabindex="-1" dir="auto"><a id="user-content--about-the-project" class="anchor" aria-hidden="true" tabindex="-1" href="#about-the-project">🔭 About The Project 🔭</h2>
 
-Micro-desafios da aplicação Smartranking.
+Serviço de Desafios da aplicação SmartRanking.
 
 <!-- GETTING STARTED -->
 <h2 tabindex="-1" dir="auto"><a id="getting-started" class="anchor" aria-hidden="true" tabindex="-1" href="#getting-started">🚀 Getting Started 🚀</h2>
@@ -23,7 +23,7 @@ Micro-desafios da aplicação Smartranking.
 
 1. Clone o repositório
    ```sh
-   git clone https://github.com/DevMarlonFerreira/micro-desafios
+   git clone https://github.com/DevMarlonFerreira/SmartRanking-Desafio
    ```
 2. Instale os NPM packages
    ```sh
@@ -35,10 +35,6 @@ Micro-desafios da aplicação Smartranking.
 
 1 - Executar no terminal na raiz do projeto o comando " npm run start:dev".
 
-2 - Abrir o navegador na URL "http://localhost:8080/".
-
-A aplicação tem documentação via Swagger na rota "http://localhost:8080/api".
-
 <h2 tabindex="-1" dir="auto"><a id="user-content--built-with" class="anchor" aria-hidden="true" tabindex="-1" href="#-built-with">🔧 Built With 🔧</h2>
 
 [![Typescript][Typescript.org]][Typescript-url]
@@ -49,7 +45,6 @@ A aplicação tem documentação via Swagger na rota "http://localhost:8080/api"
 [![Aws][aws.com]][aws-url]
 [![Rabbitmq][rabbitmq.io]][rabbitmq-url]
 [![Nestjs][nestjs.com]][nestjs-url]
-[![Swagger][swagger.io]][swagger-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -77,6 +72,3 @@ A aplicação tem documentação via Swagger na rota "http://localhost:8080/api"
 
 [nestjs.com]: https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white
 [nestjs-url]: https://nestjs.com/
-
-[swagger.io]: https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white
-[swagger-url]: https://swagger.io/
