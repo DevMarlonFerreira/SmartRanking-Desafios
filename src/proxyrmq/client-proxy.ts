@@ -4,18 +4,16 @@ import {
   Transport,
 } from '@nestjs/microservices';
 import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class ClientProxySmartRanking {
-  constructor(private configService: ConfigService) {}
+  constructor() {}
 
   getClientProxyAdminBackendInstance(): ClientProxy {
     return ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {
-        //   urls: [`amqp://${this.configService.get<string>('RABBITMQ_USER')}:${this.configService.get<string>('RABBITMQ_PASSWORD')}@${this.configService.get<string>('RABBITMQ_URL')}`],
-        urls: [process.env.AMQPS],
+        urls: [`amqp://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_URL}`],
         queue: 'admin-backend',
       },
     });
@@ -25,8 +23,7 @@ export class ClientProxySmartRanking {
     return ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {
-        // urls: [`amqp://${this.configService.get<string>('RABBITMQ_USER')}:${this.configService.get<string>('RABBITMQ_PASSWORD')}@${this.configService.get<string>('RABBITMQ_URL')}`],
-        urls: [process.env.AMQPS],
+        urls: [`amqp://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_URL}`],
         queue: 'desafios',
       },
     });
