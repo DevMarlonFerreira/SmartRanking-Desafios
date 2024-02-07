@@ -1,73 +1,82 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<a name="readme-top"></a>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h1 align="center">Smartranking - micro-desafios</h1>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<!-- ABOUT THE PROJECT -->
+<h2 tabindex="-1" dir="auto"><a id="user-content--about-the-project" class="anchor" aria-hidden="true" tabindex="-1" href="#about-the-project">🔭 About The Project 🔭</h2>
 
-## Description
+Micro-desafios da aplicação Smartranking.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<!-- GETTING STARTED -->
+<h2 tabindex="-1" dir="auto"><a id="getting-started" class="anchor" aria-hidden="true" tabindex="-1" href="#getting-started">🚀 Getting Started 🚀</h2>
 
-## Installation
 
-```bash
-$ npm install
-```
+### Pré-requisitos
 
-## Running the app
+- npm
 
-```bash
-# development
-$ npm run start
+  ```sh
+  npm install npm@latest -g
+  ```
 
-# watch mode
-$ npm run start:dev
+### Instalação
 
-# production mode
-$ npm run start:prod
-```
+1. Clone o repositório
+   ```sh
+   git clone https://github.com/DevMarlonFerreira/micro-desafios
+   ```
+2. Instale os NPM packages
+   ```sh
+   npm install
+   ```
 
-## Test
+<!-- USAGE EXAMPLES -->
+<h2 tabindex="-1" dir="auto"><a id="user-content--usage" class="anchor" aria-hidden="true" tabindex="-1" href="#-usage">⚡ Usage ⚡</h2>
 
-```bash
-# unit tests
-$ npm run test
+1 - Executar no terminal na raiz do projeto o comando " npm run start:dev".
 
-# e2e tests
-$ npm run test:e2e
+2 - Abrir o navegador na URL "http://localhost:8080/"
 
-# test coverage
-$ npm run test:cov
-```
+A aplicação tem documentação via Swagger na rota "http://localhost:8080/api".
 
-## Support
+<h2 tabindex="-1" dir="auto"><a id="user-content--built-with" class="anchor" aria-hidden="true" tabindex="-1" href="#-built-with">🔧 Built With 🔧</h2>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+[![Typescript][Typescript.org]][Typescript-url]
+[![Node][Node.org]][Node-url]
+[![MongoDB][mongodb.com]][MongoDB-url]
+[![Prettier][prettier.io]][Prettier-url]
+[![Eslint][eslint.org]][Eslint-url]
+[![Aws][aws.com]][aws-url]
+[![Rabbitmq][rabbitmq.io]][rabbitmq-url]
+[![Nestjs][nestjs.com]][nestjs-url]
+[![Swagger][swagger.io]][swagger-url]
 
-## Stay in touch
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+[Node.org]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
+[Node-url]: https://nodejs.org
 
-## License
+[Typescript.org]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript-url]: https://www.typescriptlang.org
 
-Nest is [MIT licensed](LICENSE).
+[mongodb.com]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+
+[eslint.org]: https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white
+[Eslint-url]: https://eslint.org/
+
+[prettier.io]: https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E
+[Prettier-url]: https://prettier.io/
+
+[aws.com]: https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white
+[aws-url]: https://aws.amazon.com/pt/
+
+[rabbitmq.io]: https://img.shields.io/badge/rabbitmq-%23FF6600.svg?&style=for-the-badge&logo=rabbitmq&logoColor=white
+[rabbitmq-url]: https://rabbitmq.com/
+
+[nestjs.com]: https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white
+[nestjs-url]: https://nestjs.com/
+
+[swagger.io]: https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white
+[swagger-url]: https://swagger.io/
