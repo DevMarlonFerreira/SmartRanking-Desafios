@@ -35,7 +35,7 @@ Micro-desafios da aplicação Smartranking.
 
 1 - Executar no terminal na raiz do projeto o comando " npm run start:dev".
 
-2 - Abrir o navegador na URL "http://localhost:8080/"
+2 - Abrir o navegador na URL "http://localhost:8080/".
 
 A aplicação tem documentação via Swagger na rota "http://localhost:8080/api".
 
