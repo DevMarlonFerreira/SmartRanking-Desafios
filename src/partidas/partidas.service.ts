@@ -21,40 +21,32 @@ export class PartidasService {
 
   async criarPartida(partida: Partida): Promise<Partida> {
     try {
-      /*
-                Iremos persistir a partida e logo em seguida atualizaremos o
-                desafio. O desafio irá receber o ID da partida e seu status
-                será modificado para REALIZADO.
-            */
       const partidaCriada = new this.partidaModel(partida);
       this.logger.log(`partidaCriada: ${JSON.stringify(partidaCriada)}`);
-      /*
-                Recuperamos o ID da partida
-            */
+
       const result = await partidaCriada.save();
       this.logger.log(`result: ${JSON.stringify(result)}`);
       const idPartida = result._id;
-      /*
-                Com o ID do desafio que recebemos na requisição, recuperamos o 
-                desafio.
-            */
+
       const desafio$ = this.clientDesafios.send('consultar-desafios', {
         idJogador: '',
         _id: partida.desafio,
       });
       const desafio: Desafio = await lastValueFrom(desafio$);
-      /*
-                Acionamos o tópico 'atualizar-desafio-partida' que será
-                responsável por atualizar o desafio.
-            */
+
       const result$ = this.clientDesafios.emit('atualizar-desafio-partida', {
         idPartida: idPartida,
         desafio: desafio,
       });
       return await lastValueFrom(result$);
     } catch (error) {
-      this.logger.error(`error: ${JSON.stringify(error.message)}`);
-      throw new RpcException(error.message);
+      if (error instanceof Error) {
+        this.logger.error(`error: ${JSON.stringify(error.message)}`);
+        throw new RpcException(error.message);
+      } else {
+        this.logger.error(`unknown error: ${JSON.stringify(error)}`);
+        throw new RpcException(`unknown error`);
+      }
     }
   }
 }
