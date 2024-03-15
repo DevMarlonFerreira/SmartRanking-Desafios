@@ -4,6 +4,7 @@ import { Desafio } from './interfaces/desafio.interface';
 import { Model } from 'mongoose';
 import { DesafioStatus } from './desafio-status.enum';
 import { RpcException } from '@nestjs/microservices';
+import * as momentTimezone from 'moment-timezone';
 
 @Injectable()
 export class DesafiosService {
@@ -69,6 +70,59 @@ export class DesafiosService {
     try {
       return await this.desafioModel.findOne({ _id }).lean().exec();
     } catch (error: unknown) {
+      if (error instanceof Error) {
+        this.logger.error(`error: ${JSON.stringify(error.message)}`);
+        throw new RpcException(error.message);
+      } else {
+        this.logger.error(`unknown error: ${JSON.stringify(error)}`);
+        throw new RpcException(`unknown error`);
+      }
+    }
+  }
+
+  async consultarDesafiosRealizados(idCategoria: string): Promise<Desafio[]> {
+    try {
+      return await this.desafioModel
+        .find()
+        .where('categoria')
+        .equals(idCategoria)
+        .where('status')
+        .equals(DesafioStatus.REALIZADO)
+        .lean()
+        .exec();
+    } catch (error) {
+      if (error instanceof Error) {
+        this.logger.error(`error: ${JSON.stringify(error.message)}`);
+        throw new RpcException(error.message);
+      } else {
+        this.logger.error(`unknown error: ${JSON.stringify(error)}`);
+        throw new RpcException(`unknown error`);
+      }
+    }
+  }
+
+  async consultarDesafiosRealizadosPelaData(
+    idCategoria: string,
+    dataRef: string,
+  ): Promise<Desafio[]> {
+    try {
+      const dataRefNew = `${dataRef} 23:59:59.999`;
+
+      return await this.desafioModel
+        .find()
+        .where('categoria')
+        .equals(idCategoria)
+        .where('status')
+        .equals(DesafioStatus.REALIZADO)
+        .where('dataHoraDesafio')
+        .lte(
+          momentTimezone(dataRefNew)
+            .tz('UTC')
+            .format('YYYY-MM-DD HH:mm:ss.SSS+00:00') as unknown as number,
+        )
+        .lean()
+        .exec();
+    } catch (error) {
       if (error instanceof Error) {
         this.logger.error(`error: ${JSON.stringify(error.message)}`);
         throw new RpcException(error.message);
