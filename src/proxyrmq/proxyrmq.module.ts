@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ClientProxySmartRanking } from './client-proxy'
+import { ClientProxySmartRanking } from './client-proxy';
 
 @Module({
-    providers: [ClientProxySmartRanking],
-    exports: [ClientProxySmartRanking]
+  providers: [ClientProxySmartRanking],
+  exports: [ClientProxySmartRanking],
 })
 export class ProxyRMQModule {}
