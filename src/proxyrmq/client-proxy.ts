@@ -32,4 +32,28 @@ export class ClientProxySmartRanking {
       },
     });
   }
+
+  getClientProxyRankingsInstance(): ClientProxy {
+    return ClientProxyFactory.create({
+      transport: Transport.RMQ,
+      options: {
+        urls: [
+          `amqps://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_URL}`,
+        ],
+        queue: 'rankings',
+      },
+    });
+  }
+
+  getClientProxyNotificacoesInstance(): ClientProxy {
+    return ClientProxyFactory.create({
+      transport: Transport.RMQ,
+      options: {
+        urls: [
+          `amqps://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_URL}`,
+        ],
+        queue: 'notificacoes',
+      },
+    });
+  }
 }
