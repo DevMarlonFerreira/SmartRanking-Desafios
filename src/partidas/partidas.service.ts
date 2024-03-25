@@ -19,6 +19,9 @@ export class PartidasService {
   private clientDesafios =
     this.clientProxySmartRanking.getClientProxyDesafiosInstance();
 
+  private clientRankings =
+    this.clientProxySmartRanking.getClientProxyRankingsInstance();
+
   async criarPartida(partida: Partida): Promise<Partida> {
     try {
       const partidaCriada = new this.partidaModel(partida);
@@ -38,7 +41,17 @@ export class PartidasService {
         idPartida: idPartida,
         desafio: desafio,
       });
-      return await lastValueFrom(result$);
+      await lastValueFrom(result$);
+
+      const resultRankings$ = this.clientRankings.emit(
+        'atualizar-desafio-partida',
+        {
+          idPartida: idPartida,
+          partida: partida,
+        },
+      );
+
+      return await lastValueFrom(resultRankings$);
     } catch (error) {
       if (error instanceof Error) {
         this.logger.error(`error: ${JSON.stringify(error.message)}`);
